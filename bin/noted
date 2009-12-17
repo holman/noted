@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'rake'
+
+username = `git config --get github.user`
+
+unless username
+  warn <<-github
+
+    Cool people set their github credentials on their systems so that
+    lots of fun apps can use them. Set yours today by running:
+  
+    git config --global github.user your_gnarly_github_handle
+    
+  github
+end
+
+notes = `rake --tasks | grep notes`
+unless notes == ''
+  system('rake notes | (grep "@#{username.strip}" -B1)')
+else
+  warn "The `notes` task is undefined. Are you sure you're in a rails project?"
+end
