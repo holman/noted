@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Zach Holman"]
-  s.date = %q{2009-12-16}
+  s.date = %q{2009-12-17}
   s.default_executable = %q{noted}
   s.description = %q{Sometimes there's a lot of crap to do.}
   s.email = %q{github.com@zachholman.com}
@@ -22,8 +22,11 @@ Gem::Specification.new do |s|
     ".document",
      ".gitignore",
      "LICENSE",
+     "README.mdown",
      "Rakefile",
-     "VERSION"
+     "VERSION",
+     "bin/noted",
+     "noted.gemspec"
   ]
   s.homepage = %q{http://github.com/holman/noted}
   s.rdoc_options = ["--charset=UTF-8"]

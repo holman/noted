@@ -17,7 +17,7 @@ end
 
 notes = `rake --tasks | grep notes`
 unless notes == ''
-  system('rake notes | (grep "@#{username.strip}" -B1)')
+  system("rake notes | (grep \"@#{username.strip}\" -B1)")
 else
   warn "The `notes` task is undefined. Are you sure you're in a rails project?"
 end
